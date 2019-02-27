@@ -29,15 +29,17 @@ public class RestaurantController {
 
     @RequestMapping("/restaurant/{name}")
     public String restaurantDetails(@PathVariable String name, ModelMap modelMap){
-        Restaurant restaurant = restaurantRepository.findByName(name);
+        Restaurant restaurant = restaurantRepository.findRestaurantByNameToShowDetails(name);
         modelMap.put("restaurant", restaurant);
         return "restaurant-details";
     }
 
     @RequestMapping("search")
     public String searchByValue(@RequestParam("q") String searchValue, ModelMap modelMap) {
-        List<Restaurant> allRestaurants = restaurantRepository.findByValue(searchValue);
+        List<Restaurant> allRestaurants = restaurantRepository.findByRestaurantByValue(searchValue);
         modelMap.put("allRestaurants", allRestaurants);
         return "home";
     }
+
+
 }
