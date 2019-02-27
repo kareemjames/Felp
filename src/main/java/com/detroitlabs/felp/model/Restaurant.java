@@ -9,6 +9,7 @@ public class Restaurant {
     private String phoneNumber;
     private int rating;
     private String description;
+    private String imageName;
 
     public Restaurant(String streetAddress, String city, String state, String name, String cuisine, String phoneNumber, int rating, String description) {
         this.streetAddress = streetAddress;
@@ -19,6 +20,7 @@ public class Restaurant {
         this.phoneNumber = phoneNumber;
         this.rating = rating;
         this.description = description;
+        this.imageName = "res.jpg";
     }
 
     @Override
@@ -32,6 +34,7 @@ public class Restaurant {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", rating=" + rating +
                 ", description='" + description + '\'' +
+                ", imageName='" + imageName + '\'' +
                 '}';
     }
 
@@ -97,5 +100,13 @@ public class Restaurant {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }
