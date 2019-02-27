@@ -1,15 +1,19 @@
 package com.detroitlabs.felp.model;
 
 public class Restaurant {
-    private String location;
+    private String streetAddress;
+    private String city;
+    private String state;
     private String name;
     private String cuisine;
     private String phoneNumber;
     private int rating;
     private String description;
 
-    public Restaurant(String location, String name, String cuisine, String phoneNumber, int rating, String description) {
-        this.location = location;
+    public Restaurant(String streetAddress, String city, String state, String name, String cuisine, String phoneNumber, int rating, String description) {
+        this.streetAddress = streetAddress;
+        this.city = city;
+        this.state = state;
         this.name = name;
         this.cuisine = cuisine;
         this.phoneNumber = phoneNumber;
@@ -20,7 +24,9 @@ public class Restaurant {
     @Override
     public String toString() {
         return "Restaurant{" +
-                "location='" + location + '\'' +
+                "streetAddress='" + streetAddress + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
                 ", name='" + name + '\'' +
                 ", cuisine='" + cuisine + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
@@ -29,12 +35,28 @@ public class Restaurant {
                 '}';
     }
 
-    public String getLocation() {
-        return location;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getName() {
