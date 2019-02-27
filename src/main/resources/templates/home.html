@@ -42,7 +42,7 @@
 <div class="gifs container">
     <div class="row">
         <div th:each="restaurant: ${allRestaurants}" class="col s12 l4">
-            <!--<a th:href="@{'/gif/' + ${gif.name}}">-->
+            <a th:href="@{'/restaurant/' + ${restaurant.name}}">
                 <img th:src="@{'/images/' + ${restaurant.imageName}}" alt="restaurant" />
             </a>
             <div>
