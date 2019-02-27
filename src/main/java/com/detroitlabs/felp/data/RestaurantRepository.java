@@ -1,10 +1,12 @@
 package com.detroitlabs.felp.data;
 
 import com.detroitlabs.felp.model.Restaurant;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Component
 public class RestaurantRepository {
 
     private static final List<Restaurant> ALL_RESTAURANTS = Arrays.asList(
@@ -16,6 +18,5 @@ public class RestaurantRepository {
     public List<Restaurant> getAllRestaurants() {
         return ALL_RESTAURANTS;
     }
-
 
 }
