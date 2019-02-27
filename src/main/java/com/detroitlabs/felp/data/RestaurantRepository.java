@@ -3,6 +3,7 @@ package com.detroitlabs.felp.data;
 import com.detroitlabs.felp.model.Restaurant;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,6 +27,19 @@ public class RestaurantRepository {
             }
         }
         return null;
+    }
+
+    public List<Restaurant> findByValue(String value) {
+        Restaurant foundByValue;
+        List<Restaurant> restaurantsFoundBySearchValue = new ArrayList<>();
+
+        for (Restaurant restaurant: ALL_RESTAURANTS) {
+            if (restaurant.getName().contains(value)) {
+                foundByValue = restaurant;
+                restaurantsFoundBySearchValue.add(foundByValue);
+            }
+        }
+        return restaurantsFoundBySearchValue;
     }
 
 }
