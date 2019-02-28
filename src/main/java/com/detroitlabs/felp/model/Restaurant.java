@@ -11,7 +11,7 @@ public class Restaurant {
     private String description;
     private String imageName;
 
-    public Restaurant(String streetAddress, String city, String state, String name, String cuisine, String phoneNumber, int rating, String description) {
+    public Restaurant(String streetAddress, String city, String state, String name, String cuisine, String phoneNumber, int rating, String description, String imageName) {
         this.streetAddress = streetAddress;
         this.city = city;
         this.state = state;
@@ -20,7 +20,7 @@ public class Restaurant {
         this.phoneNumber = phoneNumber;
         this.rating = rating;
         this.description = description;
-        this.imageName = "res.jpg";
+        this.imageName = imageName;
     }
 
     @Override
